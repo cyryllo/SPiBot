@@ -4,17 +4,31 @@
     <meta charset='utf-8'>
     <title>SpyPiBot - sterowanie</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <script src="joy/virtualjoystick.js"></script>
+    	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
   </head>
   <body>
-<div class="container">
-    <h1>SpyPiBot - budujemy sterowanie do robota</h1>
 
-<div class="row">
-  <div class="col-xs-1 col-sm-4 col-md-4"><span id="result"></span>
-  
-	<script>
+
+<div class="container">
+<h1>SpyPiBot - budujemy sterowanie do robota</h1> 
+<span id="result"></span>
+<br />
+<center>
+<div class="jumbotron">  
+<video controls="controls" width="640" height="480" autoplay="autoplay" >
+      <source src="stream.m3u8" type="application/x-mpegURL" />
+    </video>
+</div>
+</center>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
 console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
 var joystick	= new VirtualJoystick({
 container	: document.getElementById('container'),
@@ -32,30 +46,6 @@ outputEl.innerHTML	= '<b>Result:</b> '
 
 }, 1/30 * 1000);
 </script>
-
-</div>
-  <div class="col-xs-6 col-sm-4 col-md-4">Kamera
-   
-
-
-</div>
-  <!-- Optional: clear the XS cols if their content doesn't match in height -->
-  <div class="clearfix visible-xs"></div>
-  <div class="col-xs-1 col-sm-4 col-md-4">Prawa gąsienica
-
-</div>
-</div>
-<div class="row">
-  <div class="col-xs-6  col-xs-offset-3">
-Slider obrotu kamery
-</div>
-</div>
-
-</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
 
