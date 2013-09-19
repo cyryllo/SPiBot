@@ -43,10 +43,10 @@ var outputEl	= document.getElementById('result');
 outputEl.innerHTML	= '<b>Result:</b> '
 + ' dx:'+joystick.deltaX()
 + ' dy:'+joystick.deltaY()
-+ (joystick.right()	? ' right'	: '')
-+ (joystick.up()	? ' up'	: '')
-+ (joystick.left()	? ' left'	: '')
-+ (joystick.down()	? ' down' : '');	
++ (joystick.right()	? ' prawo'	: '')
++ (joystick.up()	? ' przód'	: '')
++ (joystick.left()	? ' lewo'	: '')
++ (joystick.down()	? ' tył' : '');	
 
 }, 1/30 * 1000);
 </script>
