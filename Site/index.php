@@ -13,7 +13,7 @@
 
 
 <div class="container">
-<h1>SpyPiBot - budujemy sterowanie do robota</h1> 
+
 <span id="result"></span>
 <br />
 <center>
@@ -21,9 +21,13 @@
 <video controls="controls" width="640" height="480" autoplay="autoplay" >
       <source src="stream.m3u8" type="application/x-mpegURL" />
     </video>
+<p><h5>SpyPiBot</h5></p>
 </div>
+ 
 </center>
+
 </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
