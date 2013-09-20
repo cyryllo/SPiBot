@@ -19,7 +19,7 @@
 <center>
 <div class="jumbotron">  
 <video controls="controls" width="640" height="480" autoplay="autoplay" >
-      <source src="stream.m3u8" type="application/x-mpegURL" />
+      <source src="http://192.168.1.19:8090" type="application/x-mpegURL" />
     </video>
 <p><h5>SpyPiBot</h5></p>
 </div>
