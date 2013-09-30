@@ -1,4 +1,5 @@
 <?php
+//jazda do przodu
 function up($m){
 	//prawa gasienica
 	shell_exec('pigs w 22 1');
@@ -10,6 +11,31 @@ function up($m){
     shell_exec('pigs p 17 '.$m.'');
 	shell_exec('pigs p 21 '.$m.'');
 }
+//jazda w lewo do przodu
+function upleft($m, $k){
+	//prawa gasienica
+	shell_exec('pigs w 22 1');
+	shell_exec('pigs w 23 0');
+	//lewa gasienica
+	shell_exec('pigs w 24 1');
+	shell_exec('pigs w 25 0');
+	//jedziemy
+    shell_exec('pigs p 17 '.$m-$k.'');
+	shell_exec('pigs p 21 '.$m.'');
+}
+//jazda w prawo do przodu
+function upright($m, $k){
+	//prawa gasienica
+	shell_exec('pigs w 22 1');
+	shell_exec('pigs w 23 0');
+	//lewa gasienica
+	shell_exec('pigs w 24 1');
+	shell_exec('pigs w 25 0');
+	//jedziemy
+    shell_exec('pigs p 17 '.$m.'');
+	shell_exec('pigs p 21 '.$m-$k.'');
+}
+//Zatrzymywanie pojazdu
 function stop($m){
 	//prawa gasienica
 	shell_exec('pigs w 22 0');
@@ -21,6 +47,7 @@ function stop($m){
     shell_exec('pigs p 17 '.$m.'');
 	shell_exec('pigs p 21 '.$m.'');
 }
+//jazda do tyłu
 function down($m){
 	//prawa gasienica
 	shell_exec('pigs w 22 0');
@@ -32,7 +59,31 @@ function down($m){
     shell_exec('pigs p 17 '.$m.'');
 	shell_exec('pigs p 21 '.$m.'');
 }
-
+//funkcja cofania w lewo
+function downleft($m,$k){
+	//prawa gasienica
+	shell_exec('pigs w 22 0');
+	shell_exec('pigs w 23 1');
+	//lewa gasienica
+	shell_exec('pigs w 24 0');
+	shell_exec('pigs w 25 1');
+	//jedziemy
+    shell_exec('pigs p 17 '.$m-$k.'');
+	shell_exec('pigs p 21 '.$m.'');
+}
+//cofanie w prawo
+function downright($m,$k){
+	//prawa gasienica
+	shell_exec('pigs w 22 0');
+	shell_exec('pigs w 23 1');
+	//lewa gasienica
+	shell_exec('pigs w 24 0');
+	shell_exec('pigs w 25 1');
+	//jedziemy
+    shell_exec('pigs p 17 '.$m.'');
+	shell_exec('pigs p 21 '.$m-$k.'');
+}
+//skręt w lewo
 function left($m){
 	//prawa gasienica
 	shell_exec('pigs w 22 1');
@@ -44,6 +95,7 @@ function left($m){
     shell_exec('pigs p 17 '.$m.'');
 	shell_exec('pigs p 21 '.$m.'');
 }
+//skręt w prawo
 function right($m){
 	//prawa gasienica
 	shell_exec('pigs w 22 0');
@@ -67,7 +119,22 @@ function right($m){
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <script src="joy/virtualjoystick.js"></script>
     	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    
+  <style>
+  	#rotatep    {  
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+    -ms-transform:rotate(45deg);
+   }
+   #rotatel    {  
+    -webkit-transform:rotate(315deg);
+    -moz-transform:rotate(315deg);
+    -o-transform:rotate(315deg);
+    /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+    -ms-transform:rotate(315deg);
+   }
+  </style> 
   </head>
   <body>
 
@@ -77,13 +144,58 @@ function right($m){
 <span id="result"></span>
 <br />
 <center>
-<div class="jumbotron">  
-<video controls="controls" width="640" height="480" autoplay="autoplay" >
-      <source src="http://192.168.1.19:8090" type="application/x-mpegURL" />
-    </video>
+<?php
+if ($_GET['up']) {
+  up(150);
+}
+if ($_GET['left']) {
+  left(100);
+}
+if ($_GET['stop']) {
+  stop(0);
+}
+if ($_GET['right']) {
+  right(100);
+}
+if ($_GET['down']) {
+  down(150);
+}
+if ($_GET['downleft']) {
+  downleft(150,20);
+}
+if ($_GET['downright']) {
+  downright(150,20);
+}
+if ($_GET['upleft']) {
+  upleft(150,20);
+}
+if ($_GET['upright']) {
+  upleft(150,20);
+}
+?>
+
+<!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
+	
+  <p>
+  <a href="?upleft=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-up" id="rotatel"></span></button></a> 	
+  <a href="?up=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-up"></span></button></a> 
+  <a href="?upright=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-up" id="rotatep"></span></button></a> 
+  </p>
+  <p>
+  <a href="?left=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-left"></span></button></a> 
+  <a href="?stop=true"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-ban-circle"></span></button></a> 
+  <a href="?right=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-right"></span></button></a> 
+  </p>
+  <p>
+  <a href="?downleft=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-down" id="rotatep"></span></button></a>
+  <a href="?down=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-down"></span></button></a>
+  <a href="?downright=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-down" id="rotatel"></span></button></a>
+  </p> 
+    
+    
 <p><h5>SpyPiBot</h5></p>
-</div>
- 
+
+
 </center>
 
 </div>
@@ -92,24 +204,7 @@ function right($m){
     <script src="//code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
-var joystick	= new VirtualJoystick({
-container	: document.getElementById('container'),
-mouseSupport	: true
-});
-setInterval(function(){
-var outputEl	= document.getElementById('result');
-outputEl.innerHTML	= '<b>Result:</b> '
-+ ' dx:'+joystick.deltaX()
-+ ' dy:'+joystick.deltaY()
-+ (joystick.right()	? ' prawo'	: '')
-+ (joystick.up()	? ' przód'	: '')
-+ (joystick.left()	? ' lewo'	: '')
-+ (joystick.down()	? ' tył' : '');	
-
-}, 1/30 * 1000);
-</script>
+  
   </body>
 </html>
 
