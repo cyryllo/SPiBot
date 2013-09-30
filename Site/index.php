@@ -177,22 +177,29 @@ if ($_GET['upright']) {
 <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
 	
   <p>
-  <a href="?upleft=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-up" id="rotatel"></span></button></a> 	
-  <a href="?up=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-up"></span></button></a> 
-  <a href="?upright=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-up" id="rotatep"></span></button></a> 
+  <a href="?upleft=true"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-arrow-up" id="rotatel"></span></button></a> 	
+  <a href="?up=true"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-arrow-up"></span></button></a> 
+  <a href="?upright=true"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-arrow-up" id="rotatep"></span></button></a> 
   </p>
   <p>
-  <a href="?left=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-left"></span></button></a> 
+  <a href="?left=true"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-arrow-left"></span></button></a> 
   <a href="?stop=true"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-ban-circle"></span></button></a> 
-  <a href="?right=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-right"></span></button></a> 
+  <a href="?right=true"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-arrow-right"></span></button></a> 
   </p>
   <p>
-  <a href="?downleft=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-down" id="rotatep"></span></button></a>
-  <a href="?down=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-down"></span></button></a>
-  <a href="?downright=true"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-down" id="rotatel"></span></button></a>
+  <a href="?downleft=true"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-arrow-down" id="rotatep"></span></button></a>
+  <a href="?down=true"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-arrow-down"></span></button></a>
+  <a href="?downright=true"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-arrow-down" id="rotatel"></span></button></a>
   </p> 
+  <hr />
+  <p>
+  	<div class="btn-group btn-group-lg">
+  	<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-picture"></span></button>
+  	<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-film"></span></button>
+  	</div>
+  </p>
     
-    
+ <hr />   
 <p><h5>SpyPiBot</h5></p>
 
 
