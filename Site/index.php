@@ -1,3 +1,63 @@
+<?php
+function up($m){
+	//prawa gasienica
+	shell_exec(' echo "1" > /sys/class/gpio/gpio22/value');
+	shell_exec(' echo "0" > /sys/class/gpio/gpio23/value');
+	//lewa gasienica
+	shell_exec(' echo "1" > /sys/class/gpio/gpio24/value');
+	shell_exec(' echo "0" > /sys/class/gpio/gpio25/value');
+	//jedziemy
+    shell_exec(' pigs p 17 '.$m.'');
+	shell_exec(' pigs p 21 '.$m.'');
+}
+function stop($m){
+	//prawa gasienica
+	shell_exec(' echo "0" > /sys/class/gpio/gpio22/value');
+	shell_exec(' echo "0" > /sys/class/gpio/gpio23/value');
+	//lewa gasienica
+	shell_exec(' echo "0" > /sys/class/gpio/gpio24/value');
+	shell_exec(' echo "0" > /sys/class/gpio/gpio25/value');
+	//jedziemy
+    shell_exec(' pigs p 17 '.$m.'');
+	shell_exec(' pigs p 21 '.$m.'');
+}
+function down($m){
+	//prawa gasienica
+	shell_exec(' echo "0" > /sys/class/gpio/gpio22/value');
+	shell_exec(' echo "1" > /sys/class/gpio/gpio23/value');
+	//lewa gasienica
+	shell_exec(' echo "0" > /sys/class/gpio/gpio24/value');
+	shell_exec(' echo "1" > /sys/class/gpio/gpio25/value');
+	//jedziemy
+    shell_exec(' pigs p 17 '.$m.'');
+	shell_exec(' pigs p 21 '.$m.'');
+}
+
+function left($m){
+	//prawa gasienica
+	shell_exec(' echo "1" > /sys/class/gpio/gpio22/value');
+	shell_exec(' echo "0" > /sys/class/gpio/gpio23/value');
+	//lewa gasienica
+	shell_exec(' echo "0" > /sys/class/gpio/gpio24/value');
+	shell_exec(' echo "1" > /sys/class/gpio/gpio25/value');
+	//jedziemy
+    shell_exec(' pigs p 17 '.$m.'');
+	shell_exec(' pigs p 21 '.$m.'');
+}
+function right($m){
+	//prawa gasienica
+	shell_exec(' echo "0" > /sys/class/gpio/gpio22/value');
+	shell_exec(' echo "1" > /sys/class/gpio/gpio23/value');
+	//lewa gasienica
+	shell_exec(' echo "1" > /sys/class/gpio/gpio24/value');
+	shell_exec(' echo "0" > /sys/class/gpio/gpio25/value');
+	//jedziemy
+    shell_exec(' pigs p 17 '.$m.'');
+	shell_exec(' pigs p 21 '.$m.'');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
