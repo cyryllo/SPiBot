@@ -2,110 +2,110 @@
 //jazda do przodu
 function up($m){
 	//prawa gasienica
-	shell_exec('pigs w 22 1');
-	shell_exec('pigs w 23 0');
+	shell_exec('pigs w 21 1');
+	shell_exec('pigs w 22 0');
 	//lewa gasienica
+	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 1');
-	shell_exec('pigs w 25 0');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m.'');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //jazda w lewo do przodu
-function upleft($m, $k){
+function upleft($m){
 	//prawa gasienica
-	shell_exec('pigs w 22 1');
-	shell_exec('pigs w 23 0');
+	shell_exec('pigs w 21 1');
+	shell_exec('pigs w 22 0');
 	//lewa gasienica
+	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 1');
-	shell_exec('pigs w 25 0');
 	//jedziemy
-    shell_exec('pigs p 17 '.$m-$k.'');
-	shell_exec('pigs p 21 '.$m.'');
+    shell_exec('pigs p 17 120');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //jazda w prawo do przodu
-function upright($m, $k){
+function upright($m){
 	//prawa gasienica
-	shell_exec('pigs w 22 1');
-	shell_exec('pigs w 23 0');
+	shell_exec('pigs w 21 1');
+	shell_exec('pigs w 22 0');
 	//lewa gasienica
+	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 1');
-	shell_exec('pigs w 25 0');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m-$k.'');
+	shell_exec('pigs p 18 120');
 }
 //Zatrzymywanie pojazdu
 function stop($m){
 	//prawa gasienica
+	shell_exec('pigs w 21 0');
 	shell_exec('pigs w 22 0');
-	shell_exec('pigs w 23 0');
 	//lewa gasienica
+	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 0');
-	shell_exec('pigs w 25 0');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m.'');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //jazda do tyłu
 function down($m){
 	//prawa gasienica
-	shell_exec('pigs w 22 0');
-	shell_exec('pigs w 23 1');
+	shell_exec('pigs w 21 0');
+	shell_exec('pigs w 22 1');
 	//lewa gasienica
+	shell_exec('pigs w 23 1');
 	shell_exec('pigs w 24 0');
-	shell_exec('pigs w 25 1');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m.'');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //funkcja cofania w lewo
-function downleft($m,$k){
+function downleft($m){
 	//prawa gasienica
-	shell_exec('pigs w 22 0');
-	shell_exec('pigs w 23 1');
+	shell_exec('pigs w 21 0');
+	shell_exec('pigs w 22 1');
 	//lewa gasienica
+	shell_exec('pigs w 23 1');
 	shell_exec('pigs w 24 0');
-	shell_exec('pigs w 25 1');
 	//jedziemy
-    shell_exec('pigs p 17 '.$m-$k.'');
-	shell_exec('pigs p 21 '.$m.'');
+    shell_exec('pigs p 17 120');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //cofanie w prawo
-function downright($m,$k){
+function downright($m){
 	//prawa gasienica
-	shell_exec('pigs w 22 0');
-	shell_exec('pigs w 23 1');
+	shell_exec('pigs w 21 0');
+	shell_exec('pigs w 22 1');
 	//lewa gasienica
+	shell_exec('pigs w 23 1');
 	shell_exec('pigs w 24 0');
-	shell_exec('pigs w 25 1');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m-$k.'');
+	shell_exec('pigs p 18 120');
 }
 //skręt w lewo
 function left($m){
 	//prawa gasienica
+	shell_exec('pigs w 21 0');
 	shell_exec('pigs w 22 1');
-	shell_exec('pigs w 23 0');
 	//lewa gasienica
-	shell_exec('pigs w 24 0');
-	shell_exec('pigs w 25 1');
+	shell_exec('pigs w 23 0');
+	shell_exec('pigs w 24 1');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m.'');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //skręt w prawo
 function right($m){
 	//prawa gasienica
+	shell_exec('pigs w 21 1');
 	shell_exec('pigs w 22 0');
-	shell_exec('pigs w 23 1');
 	//lewa gasienica
-	shell_exec('pigs w 24 1');
-	shell_exec('pigs w 25 0');
+	shell_exec('pigs w 23 1');
+	shell_exec('pigs w 24 0');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 21 '.$m.'');
+	shell_exec('pigs p 18 '.$m.'');
 }
 
 ?>
@@ -149,28 +149,28 @@ if ($_GET['up']) {
   up(150);
 }
 if ($_GET['left']) {
-  left(100);
+  left(60);
 }
 if ($_GET['stop']) {
   stop(0);
 }
 if ($_GET['right']) {
-  right(100);
+  right(60);
 }
 if ($_GET['down']) {
   down(150);
 }
 if ($_GET['downleft']) {
-  downleft(150,20);
+  downleft(150);
 }
 if ($_GET['downright']) {
-  downright(150,20);
+  downright(150);
 }
 if ($_GET['upleft']) {
-  upleft(150,20);
+  upleft(150);
 }
 if ($_GET['upright']) {
-  upleft(150,20);
+  upright(150);
 }
 ?>
 
