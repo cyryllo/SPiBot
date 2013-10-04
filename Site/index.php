@@ -20,7 +20,7 @@ function upleft($m){
 	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 1');
 	//jedziemy
-    shell_exec('pigs p 17 120');
+    shell_exec('pigs p 17 110');
 	shell_exec('pigs p 18 '.$m.'');
 }
 //jazda w prawo do przodu
@@ -33,7 +33,7 @@ function upright($m){
 	shell_exec('pigs w 24 1');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 18 120');
+	shell_exec('pigs p 18 110');
 }
 //Zatrzymywanie pojazdu
 function stop($m){
@@ -68,7 +68,7 @@ function downleft($m){
 	shell_exec('pigs w 23 1');
 	shell_exec('pigs w 24 0');
 	//jedziemy
-    shell_exec('pigs p 17 120');
+    shell_exec('pigs p 17 110');
 	shell_exec('pigs p 18 '.$m.'');
 }
 //cofanie w prawo
@@ -81,7 +81,7 @@ function downright($m){
 	shell_exec('pigs w 24 0');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 18 120');
+	shell_exec('pigs p 18 110');
 }
 //skręt w lewo
 function left($m){
@@ -108,6 +108,9 @@ function right($m){
 	shell_exec('pigs p 18 '.$m.'');
 }
 
+function onpigpio(){
+	shell_exec('sudo pigpiod' );
+}
 ?>
 
 <!DOCTYPE html>
@@ -172,6 +175,9 @@ if ($_GET['upleft']) {
 if ($_GET['upright']) {
   upright(150);
 }
+if ($_GET['onpigpio']) {
+  onpigpio();
+}
 ?>
 
 <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
@@ -198,9 +204,9 @@ if ($_GET['upright']) {
   	<button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-film"></span></button>
   	</div>
   </p>
-    
  <hr />   
-<p><h5>SpyPiBot</h5></p>
+<p><h5><a href="?onpigpio=true"><button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-off"></span></button>
+	 SpyPiBot</h5></p>
 
 
 </center>
