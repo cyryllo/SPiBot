@@ -31,7 +31,8 @@ uruchamiamy demona (trzeba uruchamiać za każdym razem po uruchomieniu systemu 
 
 sudo pigpiod
 
-2. Instalacja panelu do sterowania robotem
+2.  Instalacja panelu do sterowania robotem
+
 W przygotowaniu....
 
 
