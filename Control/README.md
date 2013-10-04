@@ -5,8 +5,7 @@ Aplikacja webowa do sterowania robotem
 Instalacja na Raspbianie
 ========
 
-Instalacja biblioteki pigpio w Raspbian
-=====
+1. Instalacja biblioteki pigpio w Raspbian
 
 Pobieramy archiwum biblioteki za pomocą polecenia
 	
@@ -32,6 +31,8 @@ uruchamiamy demona (trzeba uruchamiać za każdym razem po uruchomieniu systemu 
 
 sudo pigpiod
 
+2. Instalacja panelu do sterowania robotem
+W przygotowaniu....
 
 
 EN:
