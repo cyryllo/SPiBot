@@ -107,10 +107,6 @@ function right($m){
     shell_exec('pigs p 17 '.$m.'');
 	shell_exec('pigs p 18 '.$m.'');
 }
-
-function onpigpio(){
-	shell_exec('sudo pigpiod' );
-}
 ?>
 
 <!DOCTYPE html>
@@ -175,9 +171,6 @@ if ($_GET['upleft']) {
 if ($_GET['upright']) {
   upright(150);
 }
-if ($_GET['onpigpio']) {
-  onpigpio();
-}
 ?>
 
 <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
@@ -205,8 +198,7 @@ if ($_GET['onpigpio']) {
   	</div>
   </p>
  <hr />   
-<p><h5><a href="?onpigpio=true"><button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-off"></span></button>
-	 SpyPiBot</h5></p>
+<p><h5>SpyPiBot</h5></p>
 
 
 </center>
