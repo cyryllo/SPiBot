@@ -20,8 +20,8 @@ function upleft($m){
 	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 1');
 	//jedziemy
-    shell_exec('pigs p 17 110');
-	shell_exec('pigs p 18 '.$m.'');
+    shell_exec('pigs p 17 '.$m.'');
+	shell_exec('pigs p 18 115');
 }
 //jazda w prawo do przodu
 function upright($m){
@@ -32,8 +32,8 @@ function upright($m){
 	shell_exec('pigs w 23 0');
 	shell_exec('pigs w 24 1');
 	//jedziemy
-    shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 18 110');
+    shell_exec('pigs p 17 115');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //Zatrzymywanie pojazdu
 function stop($m){
@@ -68,8 +68,8 @@ function downleft($m){
 	shell_exec('pigs w 23 1');
 	shell_exec('pigs w 24 0');
 	//jedziemy
-    shell_exec('pigs p 17 110');
-	shell_exec('pigs p 18 '.$m.'');
+    shell_exec('pigs p 17 '.$m.'');
+	shell_exec('pigs p 18 115');
 }
 //cofanie w prawo
 function downright($m){
@@ -80,8 +80,8 @@ function downright($m){
 	shell_exec('pigs w 23 1');
 	shell_exec('pigs w 24 0');
 	//jedziemy
-    shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 18 110');
+    shell_exec('pigs p 17 115');
+	shell_exec('pigs p 18 '.$m.'');
 }
 //skręt w lewo
 function left($m){
