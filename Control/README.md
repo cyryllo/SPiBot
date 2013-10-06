@@ -1,4 +1,4 @@
-SpyPiBot - Panel do sterowania robotem
+SPiBot - Panel do sterowania robotem
 ========
 Aplikacja webowa do sterowania robotem
 
@@ -37,7 +37,7 @@ W przygotowaniu....
 
 
 EN:
-SpyPiBot - Panel for robot control
+SPiBot - Panel for robot control
 ========
 Web application to control a robot
 
