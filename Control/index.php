@@ -69,7 +69,7 @@ function downleft($m){
 	shell_exec('pigs w 24 0');
 	//jedziemy
     shell_exec('pigs p 17 '.$m.'');
-	shell_exec('pigs p 18 '.$m.'');
+	shell_exec('pigs p 18 115');
 }
 //cofanie w prawo
 function downright($m){
