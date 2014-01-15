@@ -198,7 +198,7 @@ if ($_GET['upright']) {
   	</div>
   </p>
  <hr />   
-<p><h5>SpyPiBot</h5></p>
+<p><h5>SPiBot</h5></p>
 
 
 </center>
